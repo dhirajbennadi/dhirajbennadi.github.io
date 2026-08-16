@@ -272,6 +272,22 @@
     box-shadow: 0 0 10px var(--accent-dim);
   }
 
+  .row-body{
+    display:flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .thumb{
+    flex-shrink: 0;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+  }
+  .row-content{ flex: 1; min-width: 0; }
+
   .row-top{
     display:flex;
     align-items: baseline;
@@ -385,6 +401,8 @@
     .log{ padding-left: 30px; }
     .via{ left: -30px; width:10px; height:10px; }
     .row-link{ margin-left: 0; }
+    .row-body{ flex-direction: column; }
+    .thumb{ width: 100%; height: 170px; }
     .pin{ flex-wrap: wrap; }
     .nav-links{ gap: 16px; font-size: 12px; }
   }
@@ -419,7 +437,6 @@
     <div class="wrap">
       <div class="hero-frame">
         <span class="c2"></span><span class="c3"></span>
-        <div class="eyebrow"><span class="rule"></span>Datasheet // Rev. 2026</div>
         <h1>Dhiraj <span>Bennadi</span></h1>
         <div class="role">Embedded Software Engineer<span class="cursor"></span></div>
         <p class="bio">I build real-time and low-level systems — from bootloaders and RTOS schedulers to
@@ -449,66 +466,96 @@
 
         <div class="row">
           <span class="via"></span>
-          <div class="row-top">
-            <span class="designator">U1</span>
-            <h3>Time Lapse Image Acquisition System</h3>
-            <a class="row-link" href="https://github.com/dhirajbennadi/RTES-Spring-2022/tree/main/CourseProject-TimeLapseImageAcquisition" target="_blank" rel="noopener">repo ↗</a>
+          <div class="row-body">
+            <img class="thumb" src="images/SetupImage1.jpg" alt="Time lapse acquisition rig with camera on tripod facing the capture setup" loading="lazy" decoding="async">
+            <div class="row-content">
+              <div class="row-top">
+                <span class="designator">U1</span>
+                <h3>Time Lapse Image Acquisition System</h3>
+                <a class="row-link" href="https://github.com/dhirajbennadi/RTES-Spring-2022/tree/main/CourseProject-TimeLapseImageAcquisition" target="_blank" rel="noopener">repo ↗</a>
+              </div>
+              <p>A real-time embedded system that captures and processes images at 10&nbsp;Hz from a USB camera on a Linux-based Nvidia Jetson Nano.</p>
+              <div class="tags"><span>C</span><span>Linux</span><span>Jetson Nano</span><span>Real-Time</span></div>
+            </div>
           </div>
-          <p>A real-time embedded system that captures and processes images at 10&nbsp;Hz from a USB camera on a Linux-based Nvidia Jetson Nano.</p>
-          <div class="tags"><span>C</span><span>Linux</span><span>Jetson Nano</span><span>Real-Time</span></div>
         </div>
 
         <div class="row">
           <span class="via"></span>
-          <div class="row-top">
-            <span class="designator">U2</span>
-            <h3>Gesture Recognition for Interactive Video</h3>
-            <a class="row-link" href="https://github.com/dhirajbennadi/Gesture-Recognition-For-Interactive-Video" target="_blank" rel="noopener">repo ↗</a>
+          <div class="row-body">
+            <img class="thumb" src="images/GestureRecognition.jpg" alt="Hand landmark tracking overlay used for gesture-driven video control" loading="lazy" decoding="async">
+            <div class="row-content">
+              <div class="row-top">
+                <span class="designator">U2</span>
+                <h3>Gesture Recognition for Interactive Video</h3>
+                <a class="row-link" href="https://github.com/dhirajbennadi/Gesture-Recognition-For-Interactive-Video" target="_blank" rel="noopener">repo ↗</a>
+              </div>
+              <p>A real-time system using the MediaPipe ML framework for interactive video overlay — gesture-driven zoom in/out, snapshot capture, and session close on a live feed.</p>
+              <div class="tags"><span>Python</span><span>MediaPipe</span><span>Computer Vision</span></div>
+            </div>
           </div>
-          <p>A real-time system using the MediaPipe ML framework for interactive video overlay — gesture-driven zoom in/out, snapshot capture, and session close on a live feed.</p>
-          <div class="tags"><span>Python</span><span>MediaPipe</span><span>Computer Vision</span></div>
         </div>
 
         <div class="row">
           <span class="via"></span>
-          <div class="row-top">
-            <span class="designator">U3</span>
-            <h3>Fitness Tracker</h3>
+          <div class="row-body">
+            <img class="thumb" src="images/IOTProject.jpg" alt="Client-server fitness tracker boards wired to accelerometer and air-quality sensors" loading="lazy" decoding="async">
+            <div class="row-content">
+              <div class="row-top">
+                <span class="designator">U3</span>
+                <h3>Fitness Tracker</h3>
+              </div>
+              <p>A client-server system using Bluetooth LE as the communication protocol, interfacing accelerometer, gyroscope, and air-quality sensors for activity tracking.</p>
+              <div class="tags"><span>BLE</span><span>Embedded C</span><span>Sensors</span></div>
+            </div>
           </div>
-          <p>A client-server system using Bluetooth LE as the communication protocol, interfacing accelerometer, gyroscope, and air-quality sensors for activity tracking.</p>
-          <div class="tags"><span>BLE</span><span>Embedded C</span><span>Sensors</span></div>
         </div>
 
         <div class="row">
           <span class="via"></span>
-          <div class="row-top">
-            <span class="designator">U4</span>
-            <h3>Remote Communication with 8051</h3>
-            <a class="row-link" href="https://github.com/dhirajbennadi/RemoteInterfacingWith8051" target="_blank" rel="noopener">repo ↗</a>
+          <div class="row-body">
+            <img class="thumb" src="images/8051.jpg" alt="8051 and ESP32 boards wired together for remote UART flashing over Wi-Fi" loading="lazy" decoding="async">
+            <div class="row-content">
+              <div class="row-top">
+                <span class="designator">U4</span>
+                <h3>Remote Communication with 8051</h3>
+                <a class="row-link" href="https://github.com/dhirajbennadi/RemoteInterfacingWith8051" target="_blank" rel="noopener">repo ↗</a>
+              </div>
+              <p>A system for remotely transferring and flashing binaries onto an 8051 over Wi‑Fi via an ESP32, implementing UART to access the bootloader directly.</p>
+              <div class="tags"><span>8051</span><span>ESP32</span><span>UART</span><span>Assembly</span></div>
+            </div>
           </div>
-          <p>A system for remotely transferring and flashing binaries onto an 8051 over Wi‑Fi via an ESP32, implementing UART to access the bootloader directly.</p>
-          <div class="tags"><span>8051</span><span>ESP32</span><span>UART</span><span>Assembly</span></div>
         </div>
 
         <div class="row">
           <span class="via"></span>
-          <div class="row-top">
-            <span class="designator">U5</span>
-            <h3>FreeRTOS on KL25Z &amp; Tiva C Launchpad</h3>
-            <a class="row-link" href="https://github.com/dhirajbennadi/FreeRTOS-on-KL25Z" target="_blank" rel="noopener">repo ↗</a>
+          <div class="row-body">
+            <img class="thumb" src="images/FreeRTOS.jpg" alt="FRDM-KL25Z development board used for the FreeRTOS scheduler implementation" loading="lazy" decoding="async">
+            <div class="row-content">
+              <div class="row-top">
+                <span class="designator">U5</span>
+                <h3>FreeRTOS on KL25Z &amp; Tiva C Launchpad</h3>
+                <a class="row-link" href="https://github.com/dhirajbennadi/FreeRTOS-on-KL25Z" target="_blank" rel="noopener">repo ↗</a>
+              </div>
+              <p>Implementation of a scheduler, tasks, and priority mechanisms in FreeRTOS, handling interrupts for LED interfacing across two microcontroller boards.</p>
+              <div class="tags"><span>FreeRTOS</span><span>KL25Z</span><span>Tiva C</span><span>RTOS</span></div>
+            </div>
           </div>
-          <p>Implementation of a scheduler, tasks, and priority mechanisms in FreeRTOS, handling interrupts for LED interfacing across two microcontroller boards.</p>
-          <div class="tags"><span>FreeRTOS</span><span>KL25Z</span><span>Tiva C</span><span>RTOS</span></div>
         </div>
 
         <div class="row">
           <span class="via"></span>
-          <div class="row-top">
-            <span class="designator">U6</span>
-            <h3>Secure Communication on FRDM-KL25Z</h3>
+          <div class="row-body">
+            <img class="thumb" src="images/SPICommunication.jfif" alt="Block diagram of SPI communication between two FRDM-KL25Z boards" loading="lazy" decoding="async">
+            <div class="row-content">
+              <div class="row-top">
+                <span class="designator">U6</span>
+                <h3>Secure Communication on FRDM-KL25Z</h3>
+              </div>
+              <p>Secure communication between two SPI ports using AES encryption, with a custom SPI driver and buffering scheme to prevent data loss in transit.</p>
+              <div class="tags"><span>SPI</span><span>AES</span><span>Embedded C</span></div>
+            </div>
           </div>
-          <p>Secure communication between two SPI ports using AES encryption, with a custom SPI driver and buffering scheme to prevent data loss in transit.</p>
-          <div class="tags"><span>SPI</span><span>AES</span><span>Embedded C</span></div>
         </div>
 
         <div class="row">
@@ -563,8 +610,7 @@
   <section id="contact">
     <div class="wrap">
       <div class="section-head">
-        <h2>Connector</h2>
-        <div class="tag">4-pin // wanna collaborate?</div>
+        <h2>Contact</h2>
       </div>
       <div class="connector">
         <div class="pin">
